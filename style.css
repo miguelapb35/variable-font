@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Anybody";
+  src: url("https://assets.codepen.io/1492907/Anybody.woff2") format("woff2");
+}
+* {
+  font-family: "Anybody";
+  margin: 0;
+}
+
+h1 {
+  --x-translate: 0;
+  --y-translate: 0;
+  font-size: calc(100vw / 24 * 3);
+  color: #f0f0f0;
+  -webkit-transform: matrix3d(1, 0, 0, calc(var(--x-translate) / 1000000), 0, 1, 0, calc(var(--y-translate) / 1000000), 0, 0, 1, 0, 0, 0, 0, 1);
+          transform: matrix3d(1, 0, 0, calc(var(--x-translate) / 1000000), 0, 1, 0, calc(var(--y-translate) / 1000000), 0, 0, 1, 0, 0, 0, 0, 1);
+  font-variation-settings: 'wght' 700;
+  text-shadow: calc(100vw / 24 * 0.1666666667) 10px 2px rgba(0, 0, 0, 0.01), calc(100vw / 24 * 0.1666666667) calc(100vw / 24 * 0.1666666667) 10px rgba(0, 0, 0, 0.15), calc(calc(100vw / 24 * 0.1666666667) * -1) calc(calc(100vw / 24 * 0.1666666667) * -1) 10px rgba(255, 255, 255, 0.5);
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+}
+
+a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  color: #000;
+  text-decoration: none;
+}
+a:last-of-type {
+  right: 0;
+  left: unset;
+}
